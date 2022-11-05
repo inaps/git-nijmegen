@@ -1,0 +1,40 @@
+@import "src/vars.module";
+
+.inputContainer {
+  display: flex;
+  margin-top: 8px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.label {
+  color: $color-label;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.input {
+  height: 38px;
+  width: 100%;
+  padding: 0 10px;
+  outline: none;
+  color: $color-text;
+  font-family: monospace;
+  font-size: 16px;
+  border-radius: 4px;
+  background: $color-input-background;
+  border: 1px solid $color-input-border;
+  transition: border-color 0.1s;
+  
+  &:hover {
+	border-color: $color-input-border-hover;
+  }
+  
+  &:focus {
+	border-color: $color-input-border-hover;
+  }
+  
+  &::placeholder {
+	color: $color-input-placeholder-text;
+  }
+}

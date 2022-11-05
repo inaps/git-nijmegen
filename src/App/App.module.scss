@@ -1,0 +1,26 @@
+@import "src/vars.module";
+
+.app {
+  height: 100%;
+  background: $color-background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  width: 800px;
+  
+  .shortFields {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+  }
+  
+  .result {
+    margin-top: 32px;
+    width: 100%;
+  }
+}
+
