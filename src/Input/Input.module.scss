@@ -1,22 +1,8 @@
 @import "src/vars.module";
 
-.inputContainer {
-  display: flex;
-  margin-top: 8px;
-  width: 100%;
-  flex-direction: column;
-}
-
-.label {
-  color: $color-label;
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
 .input {
   height: 38px;
-  width: 100%;
-  padding: 0 10px;
+  padding: 0 8px;
   outline: none;
   color: $color-text;
   font-family: monospace;
@@ -37,4 +23,8 @@
   &::placeholder {
 	color: $color-input-placeholder-text;
   }
+}
+
+.copy {
+  cursor: pointer;
 }

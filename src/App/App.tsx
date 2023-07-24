@@ -6,7 +6,7 @@ import {
 	LOCALSTORAGE_KEY_PROJECT,
 	LOCALSTORAGE_KEY_TITLE,
 } from "../constants";
-import { Input } from "../Input";
+import {Input} from "../Input";
 
 export const App = () => {
 	const [title, setTitle] = useState(localStorage.getItem(LOCALSTORAGE_KEY_TITLE) ?? "");
@@ -40,16 +40,15 @@ export const App = () => {
 	return (
 		<div className={styles.app}>
 			<div className={styles.form}>
-				<Input
-					defaultValue={title} onChange={handleTitleChange} label="Title" placeholder="Implement something"/>
-				<div className={styles.shortFields}>
-					<Input defaultValue={project} onChange={handleProjectChange} label="Project" placeholder="TRL"/>
-					<Input defaultValue={number} onChange={handleNumberChange} label="Number" placeholder="1234"/>
-					<Input defaultValue={prefix} onChange={handlePrefixChange} label="Prefix" placeholder="d/subtask"/>
+				<Input defaultValue={project} className={styles.project} onChange={handleProjectChange} placeholder="PRJCT"/>
+				<div className={styles.fields}>
+					<Input defaultValue={prefix} className={styles.prefix} onChange={handlePrefixChange} placeholder="prefix"/>
+					<Input defaultValue={number} className={styles.number} onChange={handleNumberChange} placeholder="number"/>
+					<Input defaultValue={title} className={styles.title} onChange={handleTitleChange} placeholder="Title"/>
 				</div>
 				<div className={styles.result}>
-					<Input value={branchName} label="Branch" placeholder="Branch name"/>
-					<Input value={commitMessage} label="Commit" placeholder="Commit message"/>
+					<Input value={branchName} isCopyOnClick placeholder="Branch name"/>
+					<Input value={commitMessage} isCopyOnClick placeholder="Commit message"/>
 				</div>
 			</div>
 		</div>
