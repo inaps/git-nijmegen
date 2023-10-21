@@ -1,0 +1,23 @@
+@import "src/vars.module";
+
+.resultField {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.textWrapper {
+  width: 100%;
+  
+  .text {
+    cursor: pointer;
+    width: 100%;
+  }
+}
+
+.copied {
+  position: absolute;
+  color: $color-text;
+  right: -120px;
+}

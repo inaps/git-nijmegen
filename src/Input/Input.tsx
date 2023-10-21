@@ -5,7 +5,6 @@ import classNames from "classnames";
 type Props = {
 	placeholder: string;
 	value?: string;
-	isCopyOnClick?: boolean;
 	className?: string;
 	defaultValue?: string;
 	onChange?: (text: string) => void;
@@ -17,24 +16,15 @@ export const Input: React.FC<Props> = ({
   className,
   placeholder,
 	defaultValue,
-	isCopyOnClick,
 }) => {
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		onChange?.(event.target.value);
 	}
 
-	const handleClick = () => {
-		console.log(value)
-		if (value && isCopyOnClick) {
-			navigator.clipboard.writeText(value)
-		}
-	}
-
 	return <input
 		value={value}
 		onChange={handleChange}
-		onClick={handleClick}
-		className={classNames(styles.input, className, {[styles.copy]: isCopyOnClick})}
+		className={classNames(styles.input, className)}
 		placeholder={placeholder}
 		defaultValue={defaultValue}
 	/>
